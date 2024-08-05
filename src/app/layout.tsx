@@ -2,8 +2,10 @@ import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import SessionProvider from "./SessionProvider";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -17,7 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <ColorModeScript initialColorMode={"dark"} />
+        <TRPCReactProvider>
+          <ChakraProvider>
+            <SessionProvider>{children}</SessionProvider>
+          </ChakraProvider>
+        </TRPCReactProvider>
       </body>
     </html>
   );
