@@ -74,8 +74,3 @@ export const authOptions: NextAuthOptions = {
  * @see https://next-auth.js.org/configuration/nextjs
  */
 export const getServerAuthSession = () => getServerSession(authOptions);
-function GithubProvider(arg0: {
-  clientId: any;
-}): import("next-auth/providers/index").Provider {
-  throw new Error("Function not implemented.");
-}
