@@ -2,8 +2,10 @@
 import { Box, Text, Spinner, Alert, AlertIcon } from "@chakra-ui/react";
 import { type PostWithUser, useGetChatData } from "~/hooks/useChat";
 import MessageBubble from "./messageBubble";
+import { useSession } from "next-auth/react";
 
 export default function ChatRegistry() {
+  const { data: session } = useSession();
   const { data, error, isLoading } = useGetChatData();
 
   if (isLoading) {
@@ -28,7 +30,11 @@ export default function ChatRegistry() {
       {data && data.length > 0 ? (
         data.map((post: PostWithUser) => (
           <Box key={post.id} className="mb-2">
-            <MessageBubble image={post.createdBy.image} message={post.name} />
+            <MessageBubble
+              reverse={post.createdById === session?.user.id}
+              image={post.createdBy.image}
+              message={post.name}
+            />
           </Box>
         ))
       ) : (

@@ -1,19 +1,19 @@
-import { Avatar, HStack, Text } from "@chakra-ui/react";
+import { Avatar, Box, HStack, Stack, Text } from "@chakra-ui/react";
 
 interface Props {
   message: string;
   image?: string | null;
-  reverse?: boolean;
+  reverse?: boolean | null;
 }
 
 export default function MessageBubble(props: Props) {
-  const { message, image } = props;
+  const { message, image, reverse } = props;
   return (
     <>
-      <HStack>
+      <Stack direction={reverse ? ["row-reverse"] : ["row"]}>
         <Avatar size={"sm"} src={image ?? undefined} />
         <Text>{message}</Text>
-      </HStack>
+      </Stack>
     </>
   );
 }
