@@ -29,7 +29,7 @@ export default function Home() {
               </Center>
             </div>
             <div className="flex flex-col gap-4 sm:flex-col-reverse">
-              <ChatRegistry className="w-full" />
+              <ChatRegistry className="flex w-full flex-col-reverse sm:flex-col" />
               <GlobalInput />
             </div>
           </div>

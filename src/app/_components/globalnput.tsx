@@ -23,7 +23,7 @@ export default function GlobalInput() {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <InputGroup size="md">
+      <InputGroup size="md" my={4}>
         <Input
           value={message}
           onChange={(e) => setMessage(e.target.value)}
