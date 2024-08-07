@@ -1,4 +1,4 @@
-import { Avatar, Box, HStack, Stack, Text } from "@chakra-ui/react";
+import { Avatar, Stack, Text } from "@chakra-ui/react";
 
 interface Props {
   message: string;

@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#171923] to-[#54266c] text-white">
         <Container>
-          <VStack gap="8">
+          <div className="mt-8 flex flex-col sm:mt-0">
             <div className="hidden sm:inline-block">
               <Center>
                 <VStack>
@@ -28,9 +28,11 @@ export default function Home() {
                 </VStack>
               </Center>
             </div>
-            <GlobalInput />
-            <ChatRegistry />
-          </VStack>
+            <div className="flex flex-col gap-4 sm:flex-col-reverse">
+              <ChatRegistry className="w-full" />
+              <GlobalInput />
+            </div>
+          </div>
         </Container>
       </main>
     </>

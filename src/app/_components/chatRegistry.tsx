@@ -4,7 +4,7 @@ import { type PostWithUser, useGetChatData } from "~/hooks/useChat";
 import MessageBubble from "./messageBubble";
 import { useSession } from "next-auth/react";
 
-export default function ChatRegistry() {
+export default function ChatRegistry({ className }: { className: string }) {
   const { data: session } = useSession();
   const { data, error, isLoading } = useGetChatData();
 
@@ -26,7 +26,7 @@ export default function ChatRegistry() {
   }
 
   return (
-    <Box className="w-full">
+    <Box className={className}>
       {data && data.length > 0 ? (
         data.map((post: PostWithUser) => (
           <Box key={post.id} className="mb-2">
