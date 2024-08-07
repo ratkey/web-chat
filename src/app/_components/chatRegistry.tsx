@@ -1,5 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import { Box, Text, Spinner, Alert, AlertIcon } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Spinner,
+  Alert,
+  AlertIcon,
+  Tag,
+  TagLabel,
+  Avatar,
+} from "@chakra-ui/react";
 import { type PostWithUser, useGetChatData } from "~/hooks/useChat";
 import MessageBubble from "./messageBubble";
 import { useSession } from "next-auth/react";

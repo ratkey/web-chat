@@ -22,7 +22,7 @@ export default function Navbar() {
   const { data: session } = useSession();
 
   return (
-    <>
+    <div className="w-full">
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box>
@@ -79,6 +79,6 @@ export default function Navbar() {
           </Flex>
         </Flex>
       </Box>
-    </>
+    </div>
   );
 }
