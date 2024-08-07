@@ -3,7 +3,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 
-const URI = "http://localhost:3000/api/chat";
+const URI = `/api/chat`;
 
 type CreatePost = {
   name: string;
