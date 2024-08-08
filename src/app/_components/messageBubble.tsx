@@ -2,8 +2,9 @@ import { Avatar, Box, Stack, Tag, TagLabel, Text } from "@chakra-ui/react";
 
 interface Props {
   message: string;
-  image?: string | null;
+  image?: string;
   own?: boolean | null;
+  userId?: string;
 }
 
 export default function MessageBubble(props: Props) {
@@ -13,8 +14,8 @@ export default function MessageBubble(props: Props) {
       <div className={`flex gap-2 ${own && "flex-row-reverse"}`}>
         <Avatar
           alignSelf={"start"}
-          src={image ?? undefined}
-          size="xs"
+          src={image}
+          size="sm"
           name="Segun Adebayo"
         />
         <div

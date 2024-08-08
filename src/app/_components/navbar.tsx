@@ -21,6 +21,8 @@ import Image from "next/image";
 export default function Navbar() {
   const { data: session } = useSession();
 
+  const userImage = `https://api.dicebear.com/9.x/micah/svg?seed=${session?.user.id}&flip=true`;
+
   return (
     <div className="w-full">
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
@@ -28,7 +30,7 @@ export default function Navbar() {
           <Box>
             <Image
               priority
-              src={"/web-chat-logo/svg/logo.svg"}
+              src={userImage}
               alt="Icon"
               width={100}
               height={100}
@@ -49,18 +51,12 @@ export default function Navbar() {
                     cursor={"pointer"}
                     minW={0}
                   >
-                    <Avatar
-                      size={"sm"}
-                      src={session?.user?.image ?? undefined}
-                    />
+                    <Avatar size={"sm"} src={userImage} />
                   </MenuButton>
                   <MenuList alignItems={"center"}>
                     <br />
                     <Center>
-                      <Avatar
-                        size={"2xl"}
-                        src={session?.user?.image ?? undefined}
-                      />
+                      <Avatar size={"2xl"} src={userImage} />
                     </Center>
                     <br />
                     <Center>

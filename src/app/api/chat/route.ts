@@ -5,14 +5,6 @@ import { db } from "~/server/db";
 
 export async function GET() {
   const data = await db.post.findMany({
-    include: {
-      createdBy: {
-        select: {
-          name: true,
-          image: true,
-        },
-      },
-    },
     orderBy: {
       createdAt: "desc",
     },
