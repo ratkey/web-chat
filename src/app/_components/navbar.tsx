@@ -37,7 +37,7 @@ export default function Navbar() {
           <Box>
             <Image
               priority
-              src={userImage}
+              src="/web-chat-logo/svg/logo.svg"
               alt="Icon"
               width={100}
               height={100}
