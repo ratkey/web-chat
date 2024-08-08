@@ -31,8 +31,8 @@ export default function ChatRegistry({ className }: { className: string }) {
         data.map((post: PostWithUser) => (
           <Box key={post.id} className="mb-2">
             <MessageBubble
+              userId={post.createdById}
               own={post.createdById === session?.user.id}
-              image={`https://api.dicebear.com/9.x/micah/svg?seed=${session?.user.id}&flip=true`}
               message={post.name}
             />
           </Box>
