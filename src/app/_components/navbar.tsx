@@ -17,11 +17,18 @@ import {
 } from "@chakra-ui/react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
+import { createAvatar } from "@dicebear/core";
+import { funEmoji } from "@dicebear/collection";
 
 export default function Navbar() {
   const { data: session } = useSession();
 
-  const userImage = `https://api.dicebear.com/9.x/micah/svg?seed=${session?.user.id}&flip=true`;
+  const avatar = createAvatar(funEmoji, {
+    seed: session?.user.id,
+    flip: true,
+  });
+
+  const userImage = avatar.toDataUri();
 
   return (
     <div className="w-full">
