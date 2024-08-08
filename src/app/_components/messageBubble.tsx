@@ -21,10 +21,10 @@ export default function MessageBubble(props: Props) {
 
   return (
     <>
-      <div className={flex gap-2 ${own && "flex-row-reverse"}}>
+      <div className={`flex gap-2 ${own && "flex-row-reverse"}`}>
         <Avatar alignSelf={"start"} src={svg} size="sm" name="Segun Adebayo" />
         <div
-          className={${own ? "rounded-b-xl rounded-s-xl" : "rounded-b-xl rounded-e-xl"} bg-teal-800 p-2}
+          className={`${own ? "rounded-b-xl rounded-s-xl" : "rounded-b-xl rounded-e-xl"} bg-teal-800 p-2`}
         >
           <Text>{message}</Text>
         </div>
