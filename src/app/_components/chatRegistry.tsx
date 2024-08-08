@@ -40,7 +40,7 @@ export default function ChatRegistry({ className }: { className: string }) {
         data.map((post: PostWithUser) => (
           <Box key={post.id} className="mb-2">
             <MessageBubble
-              reverse={post.createdById === session?.user.id}
+              own={post.createdById === session?.user.id}
               image={post.createdBy.image}
               message={post.name}
             />

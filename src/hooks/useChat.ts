@@ -56,6 +56,6 @@ export function useGetChatData() {
   return useQuery<PostWithUser[]>({
     queryKey: ["getMessages"],
     queryFn: getChatData,
-    refetchInterval: 1000,
+    refetchInterval: 2000,
   });
 }
