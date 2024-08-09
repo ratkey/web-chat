@@ -19,7 +19,7 @@ export default function MessageBubble(props: Props) {
           name="Segun Adebayo"
         />
         <div
-          className={`${own ? "rounded-b-xl rounded-s-xl" : "rounded-b-xl rounded-e-xl"} bg-teal-800 p-2`}
+          className={`${own ? "rounded-b-xl rounded-s-xl" : "rounded-b-xl rounded-e-xl"} bg-indigo-500 p-2`}
         >
           <Text>{message}</Text>
         </div>

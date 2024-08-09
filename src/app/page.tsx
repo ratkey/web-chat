@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#171923] to-[#54266c] text-white">
+      <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#171923] to-[#54266c] text-[#ffffff]">
         <Container>
           <div className="mt-8 flex flex-col sm:mt-0">
             <div className="hidden sm:inline-block">
